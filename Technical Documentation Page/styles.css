@@ -1,0 +1,203 @@
+/*=============== GOOGLE FONTS ===============*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*=============== VARIABLES ===============*/
+
+:root {
+    --background: #292C4A;
+    --background-dark: #272944;
+    --foreground: rgb(255, 255, 255);
+    --accent-color: rgb(216, 191, 228);
+
+    --nav-width-collapsed: 80px;
+    --nav-width: 350px;
+    --main-padding: 20px;
+}
+
+/*=============== BASE ===============*/
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--foreground);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+}
+
+main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: var(--main-padding);
+    padding-left: calc(var(--nav-width-collapsed) + var(--main-padding));
+}
+
+/*=============== NAVBAR ===============*/
+
+.menu-icon {
+    width: 30px;
+    margin: 25px;
+    transition: all 1s ease;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: #181a2ee1;
+    backdrop-filter: blur(5px);
+    width: var(--nav-width-collapsed);
+    overflow: hidden;
+    transition: all 1s ease;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 15px 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    position: relative;
+    display: block;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 16px;
+    display: table;
+    width: var(--nav-width);
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    opacity: 0%;
+}
+
+.nav-header {
+    margin: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: var(--nav-width);
+    transition: all 0.5s ease;
+    opacity: 0%;
+}
+
+nav:hover {
+    width: var(--nav-width);
+    overflow-y: auto;
+    transition: all 0.5s ease;
+}
+
+nav:hover .nav-link {
+    opacity: 100%;
+    transition: opacity 1s ease;
+}
+
+nav:hover .nav-header {
+    opacity: 100%;
+    transition: opacity 1s ease;
+}
+
+nav:hover .menu-icon {
+    transform: rotate(90deg);
+    transition: all 1s ease;
+}
+
+nav a:hover {
+    border-left-style: solid;
+    border-width: 4px;
+    border-left-color: var(--accent-color);
+    font-weight: 600;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 12px;
+}
+
+/*=============== ARTICLES ===============*/
+
+header {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 2em;
+}
+
+article {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/*=============== CODE SECTIONS ===============*/
+
+code {
+    background: #181a2e88;
+    border-radius: 5px;
+    color: var(--accent-color);
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+/*=============== SCROLLBAR ===============*/
+
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+/*=============== MEDIA QUERY ===============*/
+
+@media print {
+    nav {
+        display: none;
+    }
+
+    * {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+
+    main {
+        padding-left: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    nav {
+      width: 60px;
+    }
+    .menu-icon {
+        width: 35px;
+        margin: 15px;
+        transition: all 1s ease;
+    }
+    main {
+        padding-left: calc(60px + var(--main-padding));
+    }
+  }
