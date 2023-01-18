@@ -1,0 +1,334 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+
+/*=============== VARIABLES ===============*/
+
+:root {
+    --primary-color: #be9a6e;
+    --section-color: rgba(255, 255, 255, 0.096);
+}
+
+/*=============== BASE ===============*/
+
+* {
+    font-family: 'Open-Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-size: 16px;
+    color: #fff;
+    z-index: 10;
+}
+
+html {
+    background: #000;
+    scroll-behavior: smooth;
+}
+
+p,
+h2 {
+    line-height: 2rem;
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+/*=============== SCROLLBAR ===============*/
+
+html::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5rem;
+}
+
+/*=============== FONT AWESOME ICONS ===============*/
+
+.fab,
+.fa-solid {
+    color: var(--primary-color)
+}
+
+.fab:hover {
+    color: #fff;
+}
+
+/*=============== NAVBAR ===============*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    background: #000;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.247);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .nav-bar a {
+    margin: 0 1rem;
+    font-size: 1.6 rem;
+    color: #fff;
+}
+
+.header .nav-bar a:hover {
+    color: var(--primary-color);
+    border-bottom: .1rem solid var(--primary-color);
+}
+
+.logo {
+    width: 50px;
+}
+
+/*=============== BUTTONS ===============*/
+
+.btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    background: transparent;
+    outline: solid 1.5px var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: var(--primary-color);
+}
+
+.btn-s {
+    padding: 5px 10px;
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+
+/*=============== SECTIONS ===============*/
+
+section {
+    padding: 10rem 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    align-items: center;
+    background: var(--section-color);
+}
+
+.row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+
+.home {
+    background-color: #000;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.home p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.home-img {
+    z-index: 0;
+}
+
+.home-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
+.heading {
+    margin: auto;
+    color: var(--primary-color);
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+#video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.row-img {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.row-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product {
+    max-width: 350px;
+    background-color: var(--section-color);
+    text-align: center;
+}
+
+.product-description {
+    margin: 20px;
+}
+
+.product-img {
+    width: 100%;
+    filter: brightness(80%) sepia(40%);
+}
+
+.product-img:hover {
+    filter: brightness(100%);
+}
+
+/*=============== FORM ===============*/
+
+.input-box {
+    display: flex;
+    align-items: center;
+}
+
+.input-box input,
+textarea {
+    width: 100%;
+    margin: 1rem;
+}
+
+.text-input {
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid 1px var(--primary-color);
+}
+
+textarea {
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid 1px var(--primary-color);
+}
+
+/*=============== FOOTER ===============*/
+
+footer {
+    margin-top: 5rem;
+    padding: 1rem;
+    background-color: var(--section-color);
+    text-align: center;
+}
+
+footer .socials a {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.credit {
+    font-size: 14px;
+    opacity: 70%;
+}
+
+.link {
+    font-size: inherit;
+    color: var(--primary-color);
+}
+
+/*=============== MEDIA QUERY ===============*/
+
+@media only screen and (max-width: 865px) {
+
+    /* For mobile phones: */
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 5rem 10%;
+    }
+
+    .home {
+        padding-top: 10rem
+    }
+
+    .home-img {
+        position: absolute;
+    }
+
+    .home-img img {
+        filter: brightness(50%);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    /* For mobile phones: */
+    .row-3 {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .header .nav-bar a {
+        margin: 0 0.5rem;
+        font-size: 1.6 rem;
+        color: #fff;
+    }
+
+    .logo {
+        width: 30px;
+    }
+}

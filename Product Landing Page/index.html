@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/7600/7600348.png"
+        type="image/x-icon">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--=============== FONT AWESOME ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <title>Landing page</title>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="#home">
+            <img class="logo" id="header-img" src="https://cdn-icons-png.flaticon.com/512/7600/7600348.png"
+                alt="company logo">
+        </a>
+        <nav class="nav-bar" id="nav-bar">
+            <a class="nav-link" href="#home">home</a>
+            <a class="nav-link" href="#about">about</a>
+            <a class="nav-link" href="#products">products</a>
+            <a class="nav-link" href="#contact">contact</a>
+        </nav>
+    </header>
+
+    <section class="row home" id="home">
+        <div class="content">
+            <h1>yummy yummy wine</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga natus debitis iste hic ipsam dolore.</p>
+            <a href="#" class="btn">yum</a>
+        </div>
+        <div class="home-img">
+            <img src="https://images.pexels.com/photos/11357544/pexels-photo-11357544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="champagne glass and bottle">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading">
+            about us
+        </h1>
+        <div class="row about">
+            <div class="row-video">
+                <iframe id="video" width="100%" height="300px"
+                    src="https://www.youtube.com/embed/UpcHLAnQ2mo?controls=0&autoplay=1&loop=1&autopause=0&mute=1&playlist=UpcHLAnQ2mo">
+                </iframe>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, vitae. Iure voluptates fuga,
+                    perspiciatis sint corrupti minus sit eum exercitationem. Illum cumque voluptatem recusandae tempora
+                    sunt voluptate in qui quae?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h1 class="heading">
+            products
+        </h1>
+        <div class="row-3">
+            <div class="product">
+                <img class="product-img"
+                    src="https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=691&q=80"
+                    alt="glass of rose wine with grapes and leaves laying next to it">
+                <div class="product-description">
+                    <h2>rosé wine</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-img"
+                    src="https://images.unsplash.com/photo-1606767208159-1a5fb0a87841?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                    alt="white wine poured into the glass">
+                <div class="product-description">
+                    <h2>white wine</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-img"
+                    src="https://images.unsplash.com/photo-1608022757731-e7c2bc13819d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                    alt="glass of red wine with tangerines, cinnamon sticks and pine cones laying next to it">
+                <div class="product-description">
+                    <h2>red wine</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading">
+            contact
+        </h1>
+        <div class="row contact">
+            <div class="row-img">
+                <img src="https://images.pexels.com/photos/14663633/pexels-photo-14663633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="a glass of white wine on the table next to some smartphones and a candle">
+            </div>
+            <div class="content">
+                <h2>get in touch</h2>
+                <form class="form" id="form" action="https://www.freecodecamp.com/email-submit">
+                    <div class="input-box">
+                        <span class="fa-solid fa-user"></span>
+                        <input type="text" class="text-input" name="name" placeholder="name">
+                    </div>
+                    <div class="input-box">
+                        <span class="fa-solid fa-at"></span>
+                        <input type="email" class="text-input" name="email" id="email" placeholder="email">
+                    </div>
+                    <div class="input-box">
+                        <span class="fa-solid fa-message"></span>
+                        <textarea name="text" class="message" placeholder="message"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="btn btn-s" id="submit" value="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="socials">
+            <a href="#" class="fab fa-facebook-f fa-l"></a>
+            <a href="#" class="fab fa-twitter fa-l"></a>
+            <a href="#" class="fab fa-instagram fa-l"></a>
+        </div>
+        <div class="credit">created by <a href="https://codepen.io/nietoperq" class="link">nietoperq</a></div>
+    </footer>
+
+</body>
+
+</html>
