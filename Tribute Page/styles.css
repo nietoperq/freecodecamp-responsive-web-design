@@ -1,0 +1,303 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&display=swap');
+
+/*=============== VARIABLES ===============*/
+
+:root {
+    --accent-color: #aa916b;
+    --accent-color-2: rgba(0, 0, 0, 0.247);
+    --background-color: #fff;
+    --foreground-color: #000;
+    --header-font: 'Literata', serif;
+    --sections-width: 700px;
+}
+
+/*=============== SCROLLBAR ===============*/
+
+html::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    border: solid 1px var(--accent-color-2);
+    border-radius: 5rem;
+}
+
+/*=============== BASE ===============*/
+
+* {
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: 0.2s linear;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 .8rem;
+}
+
+main {
+    padding-top: 8rem;
+}
+
+h1 {
+    font-family: var(--header-font);
+    line-height: 85%;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: var(--header-font);
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: normal;
+    margin-top: 2em;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+section {
+    max-width: var(--sections-width);
+    margin: auto;
+    margin-bottom: 5rem;
+    scroll-margin-top: 10rem;
+}
+
+img {
+    display: block;
+}
+
+/*=============== HEADER ===============*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--background-color);
+    border-bottom: solid 1px var(--accent-color-2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.header a {
+    margin: 0 1rem;
+    font-size: 1.6 rem;
+    color: var(--foreground-color);
+}
+
+.header a:hover {
+    color: var(--accent-color);
+}
+
+/*=============== HOME SECTION ===============*/
+
+#home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5rem;
+    scroll-margin-top: 10rem;
+}
+
+.home-item {
+    width: 100%;
+}
+
+.name {
+    font-family: var(--header-font);
+    line-height: 85%;
+    font-size: 6vw;
+    font-weight: normal;
+}
+
+#fname {
+    text-align: right;
+    margin-right: 2rem;
+}
+
+#img-div {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    order: 2;
+}
+
+#lname {
+    margin-left: 2rem;
+    order: 3;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50% 50% 0 0;
+    border: solid 1px var(--accent-color-2);
+    padding: 1rem;
+    margin-left: -1rem;
+}
+
+#img-caption {
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1em;
+    width: inherit;
+    margin-left: -1rem;
+    border: solid 1px var(--accent-color-2);
+}
+
+/*=============== BIOGRAPHY SECTION ===============*/
+
+#tribute-info {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#quotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+/*=============== QUOTES SECTION ===============*/
+
+blockquote {
+    font-family: var(--header-font);
+    font-size: 18px;
+    font-style: italic;
+    width: 74%;
+    margin: 0.25em 0;
+    padding: 2em 40px;
+    line-height: 1.45;
+    position: relative;
+    border: solid 1px var(--accent-color-2);
+    color: #383838;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: var(--accent-color);
+}
+
+blockquote cite {
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+/*=============== WORKS SECTION ===============*/
+
+#works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book {
+    width: 200px;
+    text-align: center;
+    border: solid 1px var(--accent-color-2);
+    margin: 1rem .5rem;
+
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    filter: saturate(0%) contrast(80%);
+}
+
+.book img:hover {
+    width: 100%;
+    height: auto;
+    filter: saturate(100%) contrast(100%);
+}
+
+.book-title {
+    font-weight: bold;
+}
+
+#seemore {
+    text-align: center;
+}
+
+/*=============== FOOTER ===============*/
+
+footer {
+    width: 100%;
+    text-align: center;
+    border-top: solid 1px var(--accent-color-2);
+    padding: .5rem 0;
+    margin-top: 5rem;
+}
+
+/*=============== MEDIA QUERY ===============*/
+
+@media only screen and (max-width: 710px) {
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: .3rem;
+    }
+
+    .header a {
+        margin: 0 .6rem;
+        font-size: 1rem;
+        color: var(--foreground-color);
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    .name {
+        display: none;
+    }
+
+    #img-div {
+        width: 80%;
+    }
+
+    #img-caption {
+        width: 100%;
+    }
+
+    #quotes {
+        grid-template-columns: 1fr;
+    }
+
+    #works {
+        justify-content: space-around;
+    }
+}
